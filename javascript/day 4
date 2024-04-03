@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>Today Date & Time by js</h1>
+<button type="button"
+onclick="document.getElementById('display').innerHTML = Date()"> (click here to see)</button>
+
+
+<P id="display"></p>
+
+</body>
+</html>
