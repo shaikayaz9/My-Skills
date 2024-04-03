@@ -1,0 +1,5 @@
+//number counter for tweet text !
+
+let tweet = prompt("Enter the value:-");
+var tweetC = tweet.length;
+console.log("you have written",tweetC,"you have remained ",(140-tweetC))
