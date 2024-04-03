@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>My First JavaScript</h1>
+
+<p id="demo">JavaScript can change the style of an HTML element.</p>
+
+<script>
+function myp() {
+  document.getElementById("demo").style.fontSize = "25px"; 
+  document.getElementById("demo").style.color = "navy";
+  document.getElementById("demo").style.backgroundColor = "powderblue";        
+}
+
+
+function mypp(){
+document.getElementById("femo").innerHTML = "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).";
+document.getElementById("femo").style.color = "white";
+document.getElementById("femo").style.backgroundColor ="green";
+}
+</script>
+
+<button type="submit" onclick="mypp()">click me bro !</button>
+<button type="button" onclick="myp()">Click Me!</button>
+<p id="femo">. . . . . </p>
+</body>
+</html>
