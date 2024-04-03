@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<P> Tap on buttons to change text</P>
+
+<h1 id="myHeader">Hello World!</h1>
+<button onclick="displayResult()">Change text</button>
+
+<hr>
+<h2 id="ayazby"> shaik ayaz </h2>
+<button onclick="change_name()">change text by click</button>
+
+<hr>
+<h3 id="games">pubg</h3>
+<button onclick="change_pubg()">game name </button>
+<script>
+function displayResult() {
+  document.getElementById("myHeader").innerHTML = "Have a nice day!";}
+ 
+ function change_name() {
+  document.getElementById("ayazby").innerHTML = "Shaik Mohommad Ayaz";
+ }
+ 
+ function change_pubg(){
+ document.getElementById("games").innerHTML = "player unknown battleground ";}
+</script>
+
+</body>
+</html>
