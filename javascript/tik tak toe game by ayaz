@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>practice 1</title>
+	<style type="text/css">
+		
+		body{
+	/*background-color: powderblue;*/
+	text-align: center;
+}
+
+*{
+	padding: 0;
+	margin: 0;
+}
+
+h1{
+	text-align: center;
+	color: yellow;
+	background-color: black;
+}
+
+.container{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: auto;
+	height: 350px;
+	width: 350px;
+	flex-wrap: wrap;	
+	margin-top:20px;
+	gap:4px;
+}
+
+.container button{
+	height: 110px;
+	width: 110px;
+	font-size:90px;
+	padding-top: 15px
+	margin-top:-10px; 
+	text-align: center;
+	justify-content: center;
+	background-color:lightyellow;
+	color:red;
+	border-radius: 10px;
+	box-shadow: 0 0 1rem rgba(0,0,0,0.4);
+}
+.container button:hover{
+	background-color:yellow;
+	color:red;
+
+}
+
+p{
+	font-size: 35px;
+	font-style: italic;
+	color:blue;
+	font-weight: 600;
+
+}
+#reset-btn{
+	height: 40px;
+	width: 100px;
+	border-radius: 1rem;
+	background-color:orange;
+	
+}
+#reset-btn:hover{
+	background-color:red;
+	color:white;
+}
+footer{
+	margin: 15px;
+}
+
+
+	</style>
+</head>
+<body>
+	<h1>tik tok toe game</h1>
+	
+	<div class="container">
+		<button class="boxx"></button>
+		<button class="boxx"></button>
+		<button class="boxx"></button>
+		<button class="boxx"></button>
+		<button class="boxx"></button>
+		<button class="boxx"></button>
+		<button class="boxx"></button>
+		<button class="boxx"></button>
+		<button class="boxx"></button>
+		
+	</div>
+
+<div class="box">
+	<p id="msg">All the best !</p>
+	<button id="reset-btn">restrat</button>
+</div>
+
+<footer><i>make by <b> &copy; Ayaz Shaik</b></i></footer>
+<script type="text/javascript">
+
+let boxes = document.querySelectorAll(".boxx");
+let rbtn = document.getElementById("reset-btn");
+let box =document.querySelector("box");
+let msg = document.getElementById("msg");
+let turnO = true;
+winPatter = [
+   [0,1,2],
+   [0,3,6],
+   [0,4,8],
+   [1,4,7],
+   [2,4,6],
+   [2,5,8],
+   [3,4,5],
+   [6,7,8],
+]
+
+let resetgame = ()=>{
+	let turnO = true;
+	enabledboxes();
+	msg.innerText = `All the best !`;
+}
+
+boxes.forEach((box)=>{
+box.addEventListener("click",()=>{
+	if(turnO){
+		box.innerText ="O";
+		box.style.color = "red"
+		turnO = false;} 
+
+		else{
+		box.innerText ="X";
+		box.style.color = "blue"
+		turnO = true;}
+		box.disabled =true;
+
+		checkwinner();
+});
+
+});
+
+let disabledbox = ()=>{
+	for(let box of boxes){
+		box.disabled = true;
+	}
+}
+
+
+let enabledboxes = ()=>{
+	for(let box of boxes){
+		box.disabled = false;
+		box.innerText ="";
+	}
+}
+
+let showwinner = (pos1)=>{
+	msg.innerText = `Congratulation winner is ${pos1}`;
+    disabledbox();
+}
+
+let checkwinner = () =>{
+	for (let i of winPatter){
+		let pos1 = boxes[i[0]].innerText;
+		let pos2 = boxes[i[1]].innerText;
+		let pos3 = boxes[i[2]].innerText;
+
+
+		if(pos1 != "" && pos2 != "" && pos3 != ""){
+			if(pos1 === pos2 && pos2 === pos3){
+				console.log("winner",pos1);
+				showwinner(pos1);
+
+			}
+		}
+	}
+}
+rbtn.addEventListener("click", resetgame);
+</script>
+</body>
+</html>
