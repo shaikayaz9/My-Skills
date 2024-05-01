@@ -1,0 +1,8 @@
+//for adding new class
+$("h1").addClass("box")
+
+// for removing class
+$("h1").removeClass("box")
+
+// we can add multiple class at the time (just give space between them) 
+$("h1").addClass("box heading footer")
