@@ -1,1 +1,7 @@
-jQuery code here
+//jQuery code here use $ sign for DOM Manipulation in jQuery
+$("h1")
+//for using JQuery we need a cdn link for online work search on google (jquery CDN)or you can copy this 
+
+<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+
+// save before js and body tags
