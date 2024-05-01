@@ -1,0 +1,25 @@
+//for add EventListener in Jquery
+// in js we have (mouse , click ,keyrpress ) & also same in jquery we can use 
+
+$("h1").click(function(){
+alert("hi")
+})
+
+// ( mouseover )
+$("h1").mouseover(function(){
+alert("hi")
+})
+
+// keypress
+$("h1").keypress(function(){
+alert("hi")
+})
+
+// best second way to do is 
+$("input").keypress(function(event){
+	$('h1').text(event.key)
+})
+
+// aslo we can use this 
+$('h1').on("click",function(){
+alert("hi guys")})
