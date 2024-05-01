@@ -1,0 +1,11 @@
+// adding & removing Elements
+4("H1").after("<button>click me</button>")
+
+// we can deside all the position of new elements 
+1:after = element after the h1 tag
+2: before = beforer h1 tag
+3: prepend =under the same element but frist position
+4: append = under the same element but last position
+
+//for removing elements
+$("H1").remove();
