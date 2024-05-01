@@ -1,0 +1,2 @@
+//in jquery we can set add & remove Attribute 
+$("h1").attr("href","https://www.facebook.com")
