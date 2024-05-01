@@ -1,0 +1,8 @@
+//in jquery we can add css with this method for adding color
+$("h1").css("color","red")
+
+// for change text 
+$("h1").text("ayaz")
+
+// for inner html change
+$("h1").html("<em>ayaz</em>")
