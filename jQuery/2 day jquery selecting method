@@ -1,0 +1,5 @@
+//selecting with js DOM 
+let heading = documnet.querySelector("h1");
+
+//with jquery its simple to use DOM 
+$("h1")
