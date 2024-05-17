@@ -1,0 +1,9 @@
+node js is a server side javascript framework for back-end developer , it's helpful for us to connect runtime server client side to server side. node js help us to take free online build module for node js website with the help of (npm I (--node package name--)).
+
+1) download node.js from nodejs official website .
+
+2) after download check on node latest version (node --version or node -v)for checking node.
+
+3) check npm/ npx with the help.of ( npm --version / npx --version).
+
+4) search on terminal npm init for make json (javascript object nation ) file for running servers file .
