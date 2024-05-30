@@ -1,0 +1,48 @@
+#day 1 of learning python 
+
+#what is PYTHON ? 
+
+. python is simple and easy 
+
+. free & open scoure 
+
+. High level language 
+
+. devloped by Guido van rossom 
+
+. portable 
+
+print("hello world")
+
+#comments on python use (#)for single line comments .
+
+#for milti line comments in python use ("""    """) triple quote.
+
+#in python we have lots of data types 
+1)int 
+2)str
+3)bool
+4)complex
+5)float 
+6)none
+
+#typef of Operaters 
+#an operator is a symbol that performs a certain operation between operands 
+
+1) Arithmetic operators (+,-,/,*,%,**)
+
+2) relational / comparison Operaters (==,!=,>,<,<=,>=)
+
+3) assignment operator (=,+=,-=,%=,*=,/=,**=)
+
+4)logical Operators (not , and , or)
+
+#input in python 
+
+# input() statement is used to accept values (using keyboard)from user
+
+1) input() #result for input()is always a str
+
+2) int(input()) #int result will return 
+
+3) float (input()) #float result will return 
