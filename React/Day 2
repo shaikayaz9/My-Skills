@@ -1,0 +1,78 @@
+**   React Render HTML
+React's goal is in many ways to render HTML in a web page.
+React renders HTML to the web page by using a function called createRoot() and its method render().
+
+
+**   The createRoot Function
+The createRoot() function takes one argument, an HTML element.
+The purpose of the function is to define the HTML element where a React component should be displayed.
+
+**   The render Method
+The render() method is then called to define the React component that should be rendered.
+
+**  But render where?
+There is another folder in the root directory of your React project, named "public". In this folder, there is an index.html file.
+You'll notice a single <div> in the body of this file. This is where our React application will be rendered.
+
+**   The HTML Code
+The HTML code in this tutorial uses JSX which allows you to write HTML tags inside the JavaScript code:
+Do not worry if the syntax is unfamiliar, you will learn more about JSX in the next chapter.
+
+**   What is JSX?
+JSX stands for JavaScript XML.
+JSX allows us to write HTML in React.
+JSX makes it easier to write and add HTML in React.
+JSX allows us to write HTML elements in JavaScript and place them in the DOM without any createElement()  and/or appendChild() methods.
+JSX converts HTML tags into react elements.
+
+**   Expressions in JSX
+With JSX you can write expressions inside curly braces { }.
+The expression can be a React variable, or property, or any other valid JavaScript expression. JSX will execute the expression and return the result:
+
+**   Attribute class = className
+The class attribute is a much used attribute in HTML, but since JSX is rendered as JavaScript, and the class keyword is a reserved word in JavaScript, you are not allowed to use it in JSX.
+JSX solved this by using className instead. When JSX is rendered, it translates className attributes into class attributes.
+Note that in order to embed a JavaScript expression inside JSX, the JavaScript must be wrapped with curly braces, {}.
+
+**   React Components
+Components are independent and reusable bits of code. They serve the same purpose as JavaScript functions, but work in isolation and return HTML.
+Components come in two types, Class components and Function components, in this tutorial we will concentrate on Function components.
+
+** 1. Class Component
+A class component must include the extends React.Component statement. This statement creates an inheritance to React.Component, and gives your component access to React.Component's functions.
+The component also requires a render() method, this method returns HTML.
+
+class Car extends React.Component {
+  render() {
+    return <h2>Hi, I am a Car!</h2>;
+  }
+}
+
+** 2.Function Component
+Here is the same example as above, but created using a Function component instead.
+A Function component also returns HTML, and behaves much the same way as a Class component, but Function components can be written using much less code, are easier to understand, and will be preferred in this tutorial.
+
+function Car() {
+  return <h2>Hi, I am a Car!</h2>;
+} 
+
+
+**  Props
+Components can be passed as props, which stands for properties.
+Props are like function arguments, and you send them into the component as attributes.
+You will learn more about props in the next chapter.
+
+**  Components in Components
+We can refer to components inside other components:
+
+**  Components in Files
+React is all about re-using code, and it is recommended to split your components into separate files.
+To do that, create a new file with a .js file extension and put the code inside it:
+
+**  React Class Components
+Before React 16.8, Class components were the only way to track state and lifecycle on a React component. Function components were considered "state-less".
+With the addition of Hooks, Function components are now almost equivalent to Class components. The differences are so minor that you will probably never need to use a Class component in React.
+Even though Function components are preferred, there are no current plans on removing Class components from React.
+This section will give you an overview of how to use Class components in React.
+
+**  
