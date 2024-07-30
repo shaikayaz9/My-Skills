@@ -1,0 +1,31 @@
+import react from "react";
+import reactDOM from "react-dom";
+import "./styles.css";
+
+const sty = {
+  color: "",
+};
+
+let day = "";
+var currentTime = new Date(2024,1,2,19);
+var time = currentTime.getHours();
+
+if (time < 12) {
+  day = "good Morning";
+  sty.color = "green";
+} else if (time < 18) {
+  day = "good Afternoon";
+  sty.color = "red";
+} else {
+  day = "good Night";
+  sty.color = "blue";
+}
+
+reactDOM.render(
+  <div>
+    <h1 style={sty}>{day}</h1>
+  </div>,
+  document.getElementById("root")
+);
+
+// its a only index.js file code for understand true code 
