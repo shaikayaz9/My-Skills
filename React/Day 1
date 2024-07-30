@@ -1,1 +1,78 @@
-react
+** Run this command to create a React application named my-react-app:
+
+
+
+** npx create-react-app my-react-app
+
+
+
+** The create-react-app will set up everything you need to run a React application.
+
+function in react with uppercase litter
+// class Car {
+  constructor(name) {
+    this.brand = name;
+  }
+}
+
+const mycar = new Car("Ford");
+
+
+
+** Notice the case of the class name. We have begun the name, "Car", with an uppercase character. This is a standard naming convention for classes.
+
+
+
+
+** The super() method refers to the parent class.
+
+By calling the super() method in the constructor method, we call the parent's constructor method and get access to the parent's properties and methods.
+
+
+
+** What About this?
+The handling of this is also different in arrow functions compared to regular functions.
+
+In short, with arrow functions there is no binding of this.
+
+In regular functions the this keyword represented the object that called the function, which could be the window, the document, a button or whatever.
+
+With arrow functions, the this keyword always represents the object that defined the arrow function.
+
+Let us take a look at two examples to understand the difference.
+
+
+** Variables
+Before ES6 there was only one way of defining your variables: with the var keyword. If you did not define them, they would be assigned to the global object. Unless you were in strict mode, then you would get an error if your variables were undefined.
+
+Now, with ES6, there are three ways of defining your variables: var, let, and const.
+
+
+** Array Methods
+There are many JavaScript array methods.
+
+One of the most useful in React is the .map() array method.
+
+The .map() method allows you to run a function on each item in the array, returning a new array as the result.
+
+In React, map() can be used to generate lists.
+const myArray = ['apple', 'banana', 'orange'];
+
+const myList = myArray.map((item) => <p>{item}</p>)
+
+** Modules
+JavaScript modules allow you to break up your code into separate files.
+
+This makes it easier to maintain the code-base.
+
+ES Modules rely on the import and export statements.
+
+** Ternary Operator
+The ternary operator is a simplified conditional operator like if / else.
+
+Syntax: condition ? <expression if true> : <expression if false>
+
+Here is an example using if / else:
+
+
+
