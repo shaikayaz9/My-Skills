@@ -7,7 +7,7 @@ const sty = {
 };
 
 let day = "";
-var currentTime = new Date(2024,1,2,19);
+var currentTime = new Date();
 var time = currentTime.getHours();
 
 if (time < 12) {
