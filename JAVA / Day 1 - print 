@@ -1,0 +1,40 @@
+public class DAY1 {
+    public static void main(String args[]){
+        System.out.println("Hello worlds from java");
+    }
+}
+
+---------------------------------------------------------
+
+// it's a java boiler code 😀 in java everything is in Classes , and in this boiler code function under the class 
+1 : { void main } is a function.
+2 : { DAY1 }it's a file name who always be a Capital letter 
+3 : { System.out.print } for print code .
+4 : { System.out.println } for print the next line code ;
+5 : { public class DAY1 }it's a class in Java .
+
+---------------------------------------------------------
+
+
+import java.util.*;
+public class DAY1 {
+    public static void main(String args[]){
+        Scanner sc = new Scanner(System.in);
+        String name = sc.nextLine();
+        System.out.print("your name is:");
+        System.out.println(name);
+    }
+}
+
+1 : { import java.util.* } it's package of Java. 
+2 : { Scanner sc = new Scanner (System.in)} for user input from java so we use its Scanner sc.
+3 : { nextLine()} for input with multiple.... 
+4 : { next() } for only 1 variable input . only 1 .
+5 : { Scanner sc } it's a method for get input from user 
+
+in java we have lots of next() function 
+1)  nextInt()
+2) nextFloat() etc
+
+
+---------------------------------------------------------
