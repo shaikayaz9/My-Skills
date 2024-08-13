@@ -1,0 +1,24 @@
+// operator in java.
+
+#Arithemetic operator (+ , - , * , / , ** , % , ++ , -- ).
+
+#logical operator ( && , || , !).
+
+#Assingment operator (=, == , += , -= , *= , %= , /= , &= , >> , << , !=).
+
+#relation operator ( == , != , < , > , <= , >>= ).
+
+#bitwise operator (& , | , ~ , << , >> , <<< ).
+
+#miscellaneout operator : have 3 mian things 
+1) conditional operator 2) instance of operator 3) precedence of operator
+
+1) Condition operetor
+
+if , if else , if else-if 
+
+# terrnary operator 
+(Condition)? yes : no;
+
+int (10 >5)? "pass" : "fail ;
+
