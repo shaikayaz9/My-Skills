@@ -1,0 +1,20 @@
+in java we have 2 data types 
+(1)primative                                      (2) non-primative 
+
+1. in primative data type we have total 8 types ;
+
+#numeric #textual #boolean
+
+#numerical => int , short , long , float , double.
+#textual => byte , char.
+#boolean => boolean.
+
+// escape sequence Charecter in java
+1. \n = new line 
+2. \t = tab space
+3. \s = space (oxo8)
+4. \\  = backslach
+5. \" = double quote
+6. \b = backspace 
+7. \f = formfeed
+8. \r = current return
