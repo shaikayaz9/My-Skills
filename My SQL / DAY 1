@@ -1,0 +1,22 @@
+CREATE DATABASE collage;
+
+USE collage;
+
+CREATE TABLE student(
+id INT PRIMARY KEY ,
+name VARCHAR(50),
+age INT NOT NULL,
+city VARCHAR(50)
+);
+
+
+INSERT INTO student 
+VALUES
+(1, "ayaz", 23, "kurnool"),
+(2,"Ayan", 21, "hyd"),
+(3, "fasi" 22, "hyd");
+
+SELECT * FROM student;
+
+
+//creating my Frist queries in mySQL with the basic structure SQL 
