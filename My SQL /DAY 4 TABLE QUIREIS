@@ -1,0 +1,99 @@
+-- creating main data base 
+CREATE DATABASE university;
+
+-- for use under main database use 
+USE university;
+
+-- craating table in mysql
+CREATE TABLE student (
+rollno INT PRIMARY KEY,
+name VARCHAR(50),
+marks INT NOT NULL,
+grade VARCHAR(50),
+city VARCHAR(50)
+);
+
+-- adding data in table 
+INSERT INTO student
+(rollno , name , marks , grade , city)
+VALUES
+(101, "anil",78,"C","pune"),
+(103, "bhumika",93,"A","mumbai"),
+(102, "chetan",85,"B","mumbai"),
+(104, "druv",96,"A","delhi"),
+(105, "farah",12,"F","delhi"),
+(106, "ajay",82,"B","delhi");
+
+-- view alL data in table
+SELECT * FROM student;
+
+-- add column 
+ALTER TABLE student
+ADD COLUMN age INT NOT NULL DEFAULT 22 ;
+
+-- updating a age for all 18
+UPDATE student 
+SET age = 18
+WHERE rollno BETWEEN 100 AND 120;
+
+SELECT * FROM student;
+
+-- updating a age data 
+UPDATE student 
+SET age = 19
+WHERE  marks %2 != 0;
+
+SELECT * FROM student;
+
+-- deleting the age column 
+ALTER TABLE student
+DROP COLUMN age;
+
+SELECT * FROM student;
+
+-- RERNAME the table of students
+ALTER TABLE student
+RENAME TO king;
+
+SELECT * FROM king;
+
+-- CHANGHING BACK AGAIN 
+
+ALTER TABLE king
+RENAME TO student;
+
+SELECT * FROM student;
+
+-- column NAME CHANGE IN TABLE
+
+ALTER TABLE student
+CHANGE COLUMN rollno id INT NOT NULL ;
+
+SELECT * FROM student;
+
+-- TRUNCATE TABLE DATA , ITS REMOVE ALL THE TABLE COULMN DATA
+TRUNCATE TABLE student;
+
+
+-- Q : A = Change the name of coulmn "name" to "full_name";
+--     B = delete all the student who scored marks less then 80;
+       -- C = delete the coulmn of grade;
+       
+       -- A answer 
+       
+       ALTER TABLE student
+       CHANGE COLUMN name full_name VARCHAR(50);
+       
+	SELECT * FROM student;
+       
+       -- B ANSWER
+	  DELETE FROM student
+      
+      
+      WHERE marks <=80;
+
+     -- C ANSWER
+     ALTER TABLE student
+     DROP COLUMN grade;
+       
+       
