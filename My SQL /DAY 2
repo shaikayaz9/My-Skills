@@ -1,0 +1,80 @@
+-- creating main data base 
+CREATE DATABASE collage;
+
+-- for use under main database use 
+USE collage;
+
+-- craating table in mysql
+CREATE TABLE student (
+rollno INT PRIMARY KEY,
+name VARCHAR(50),
+marks INT NOT NULL,
+grade VARCHAR(50),
+city VARCHAR(50)
+);
+
+-- adding data in table 
+INSERT INTO student
+(rollno , name , marks , grade , city)
+VALUES
+(101, "anil",78,"C","pune"),
+(103, "bhumika",93,"A","mumbai"),
+(102, "chetan",85,"B","mumbai"),
+(104, "druv",96,"A","delhi"),
+(105, "farah",12,"F","delhi"),
+(106, "ajay",82,"B","delhi");
+
+-- view alL data in table
+SELECT * FROM student;
+
+-- ADDING NEW DATA IN student TABLE
+INSERT INTO student VALUES (107, "ayaz", 81, "C" ,"delhi");
+SELECT * FROM student;
+
+-- using queries for found data under the table of student 
+-- Q:= finding the top 5 student who have heighest marks ?
+SELECT marks , name , rollno ,city
+FROM student 
+WHERE city IN ("delhi", "mumbai")
+ORDER BY marks DESC 
+LIMIT 5;
+
+-- Q:= finding the avrage of marks for each city ? 
+SELECT city ,AVG(marks),COUNT(rollno)
+FROM student
+GROUP BY city 
+ORDER BY city ;
+
+-- updating the value of new studnet
+UPDATE student 
+SET marks = 99
+WHERE name = "Ayaz";
+
+-- if you have error the you want to add this queries frist time {SSET SQL_SAFE_UPDATES = 0;}if 0 means off and 1 means on .
+SET SQL_SAFE_UPDATES = 0;
+
+-- updating the value of new studnet
+UPDATE student 
+SET marks = 99
+WHERE name = "Ayaz";
+
+SELECT * FROM student;
+
+-- Q := finding the maximum marks of student in delhi 
+SELECT city, MAX(marks),COUNT(marks)
+FROM student 
+GROUP BY city 
+HAVING MAX(marks) >80 AND city IN ("delhi")
+ORDER BY city ASC;
+
+-- deleting student id 
+DELETE FROM student WHERE name = "Ajay";
+
+SELECT * FROM student;
+
+-- updating student grade
+UPDATE student
+SET grade = "F"
+WHERE name = "farah" ;
+
+SELECT * FROM student;
