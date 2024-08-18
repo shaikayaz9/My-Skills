@@ -1,0 +1,57 @@
+-- FK means FOREIGN KEY
+
+-- creating a new database for work
+CREATE DATABASE fkey;
+
+-- for working on current database use _DATABASE name
+USE fkey;
+
+-- creating a 1st table for department
+CREATE TABLE dept(
+id INT PRIMARY KEY,
+name VARCHAR(50)
+);
+
+-- creating a 2nd table for using FK 
+CREATE TABLE teacher(
+id INT PRIMARY KEY,
+name VARCHAR(50),
+sub_id INT,
+FOREIGN KEY (sub_id) REFERENCES dept(id)
+ON DELETE CASCADE
+ON  UPDATE CASCADE
+);
+
+-- adding a 1st table values 
+INSERT INTO dept VALUES
+(1, "science"),
+(2, "english"),
+(3, "hindi"),
+(4, "urdu");
+
+-- adding a data for 2nd table
+INSERT INTO teacher VALUES
+(1,"ayaz",1),
+(2,"driver",4),
+(3,"fasi",2),
+(4,"sadiq",2),
+(5,"ayan",1),
+(6, "ravi",3);
+
+INSERT INTO dept
+VALUES 
+(110, "TELUGU") ;
+
+-- viwes all the table data
+SELECT * FROM dept;
+SELECT * FROM teacher;
+
+-- updating & checking UPDATA CASCADE its help us to change and manipulate the data if we change 1 table & 2nd table data automatically 
+-- changed its posible becouse of we are added {ON DELETE CASCADE, ON UPDATA CASCADE  }
+UPDATE teacher
+SET  sub_id= 120
+WHERE name = "fasi";
+
+SELECT * FROM teacher;
+
+-- open database option tap on reversing engineer and exicuted the database file & open EER Daigram Chart
