@@ -1,0 +1,54 @@
+<title> day4 html  </title>
+<body>
+        <main>
+                <h2>Image</h2>
+                <unf><img src="https://yt3.googleusercontent.com/05lhMeAH6tZrPIUsp2yHNz3DwzhKbDUQcxcY0_qeXVyZttR_pktBzw0FcLUSR6D4fVqsEgL3ZO0=s900-c-k-c0x00ffffff-no-rj", width="250px" alt="Hello">
+
+
+                <h2>Images on other folders</h2>
+                <unf><img src="https://yt3.googleusercontent.com/05lhMeAH6tZrPIUsp2yHNz3DwzhKbDUQcxcY0_qeXVyZttR_pktBzw0FcLUSR6D4fVqsEgL3ZO0=s900-c-k-c0x00ffffff-no-rj", width="250px", alt="bye">
+
+
+                <h2>Hyperlink</h2>
+                <unf><a href="2ayaz.html">click here to hotel menu</a>
+
+</unf>
+
+                <h2>Block level Elements</h2>
+
+                <p>Block - level element always starts on a new line and takes up the full width available (stretches out to the left
+                and right as far as it can). Some block level elements in HTML:</p>
+
+                <div id="temp1" style="font-family: monospace;font-size: 16px;"></div>
+
+                <script>
+                        document.getElementById("temp1").innerText = (`<address> <article> <aside> <blockquote> <canvas> <dd> <div> <dl> <dt> <figcaption> <figure> <footer> <form> <h1> <h6> <header> <hr> <li> <main> <nav> <noscript> <ol> <p> <pre> <section> <table> <tfoot> <ul> <video> <fieldset>`)
+                </script>
+
+                <h2>Inline Elements</h2>
+                Inline element does not start on a new line and only takes up as much width as necessary.
+                <div id="temp2" style="font-family: monospace;font-size: 16px;"></div>
+                <script>
+                        document.getElementById("temp2").innerText = (`<a> <abbr> <acronym> <b> <bdo> <big> <button> <cite> <code> <dfn> <em> <i> <img> <input> <kbd> <label> <map> <object> <output> <q> <samp> < script> < small > <span> <strong> <sub> <sup> <textarea> <time> <tt> <var> <select>`)
+                </script>
+
+                <h2>HTML Grouping Tags</h2>
+
+                &lt;div> and &lt;span> elements. The &lt;div> element is often used as a container for other HTML elements. The
+                &lt;span> element is often used as a container for some text or inline elements.
+
+                <unf><div>Hello</div>
+<span>Hai</span>
+</unf>
+                <script>
+                        unf = document.getElementsByTagName("unf");
+                        for (var i = 0; i < unf.length; i++) {
+                                pre = document.createElement("pre");
+                                pre.innerText = unf[i].innerHTML;
+                                unf[i].appendChild(pre);
+                        }
+                </script>
+                <link rel="stylesheet" href="../style.css">
+                <script src="../menu.js"></script>
+        </main>
+</body>
