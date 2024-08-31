@@ -11,7 +11,7 @@ class Student:
         sum = 0
         for i in self.marks:
             sum +=i
-        print("h1",self.name , "you have ", sum/3)
+        print("hi",self.name , "you have ", sum/3)
      
 
 
