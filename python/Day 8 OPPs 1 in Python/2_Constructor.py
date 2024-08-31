@@ -8,8 +8,8 @@
 print("Class & objects")
 
 class Student:
-    def __init__(self,fname):
-     self.name = fname
+    def __init__(self,name):
+     self.name = name
      print("adding new student in database...")
 
 s1 = Student("ayaz")
