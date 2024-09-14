@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <style>
+body{
+            background-color: aqua;
+            margin-left: 20px;
+            padding:auto;
+        }
+        button a{
+            text-decoration: none;
+            color:yellow
+        }
+        button a:hover{
+            color:black
+        }
+        button{
+            background-color: black;
+            border: 2px solid yellow;
+            color:yellow;
+            padding: 5px;
+            font-size: 20px;
+            border-radius:10px;
+        }
+
+        button:hover{
+            background-color: yellow;
+            border:2px solid black;
+            color:black;
+        }
+        input{
+            padding: 5px;
+            font-size: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Login here</h1>
+
+    <form action="/submit" method="post">
+        <label for="password"><input type="password" placeholder="Enter your password" name="password"></label>
+        <button type="submit">submit</button>
+
+    </form>
+</body>
+</html>
