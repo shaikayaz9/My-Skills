@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>today</title>
+</head>
+
+<body>
+  <h1>
+    <%= title %>
+  </h1>
+  <h2>Current Second is <%= Second %>
+  </h2>
+  <% if(Second %2===0){%>
+    <% for(let i=0; i <items.length;i++){%>
+      <li>
+        <%= items[i] %>
+      </li>
+      <%} %>
+  <%}else{%>
+       <p>No Items to Display</p>
+    <%} %>
+      <p><%- htmlContent %></p>
+        <p><%- include('Footer.ejs') %></p>
+
+
+
+</body>
+
+</html>
