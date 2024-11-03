@@ -1,0 +1,25 @@
+.accordion-item {
+    padding: 10px;
+    margin: 10px;
+    box-shadow: 5px 10px 8px #888888;
+    cursor: pointer;
+}
+
+.accordion-item:hover {
+    transition-duration: 0.2s;
+    border-left: 5px solid blueviolet
+}
+
+.accordion-open:hover {
+    transition-duration: 0.4s;
+    border-left: 5px solid orangered;
+}
+
+.accordion-title {
+    display: flex;
+    justify-content: space-between;
+}
+
+#para {
+    font-size: 18px;
+}
