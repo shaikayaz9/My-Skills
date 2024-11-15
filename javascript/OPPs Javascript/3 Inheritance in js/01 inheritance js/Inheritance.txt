@@ -1,0 +1,11 @@
+inheritance is pasing dow properties & methods from parent class to child class.
+
+class parent {
+
+}
+
+class Child extends parent{
+
+}
+
+* if child parent have same method child's method will be used [method overridibg]

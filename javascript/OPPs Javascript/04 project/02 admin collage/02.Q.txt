@@ -1,0 +1,4 @@
+Q 1 : your are creating a website for your collage . create a user with 2 properties , name & email. its also has a method caleed viweData() that allows user to viwes data
+
+
+Q 2 : create a new Class called Admin Which inheritance from user. Add new method called editdata to admin that allows it to edit website data.

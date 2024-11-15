@@ -1,0 +1,13 @@
+Classes in js.
+
+
+Constructor() method is : 
+. automatically invoked by new
+. intializes object 
+
+
+class MyClass{
+    Constructor(){...}
+
+    MyMethod(){...}
+}

@@ -1,0 +1,11 @@
+ class is a program - code template for creating objects.
+ those objects will have some state |(variable ) & some behaviur (function) inside it.
+
+ class MyClass{
+    Constructor(){...}
+
+    myMethod(){...}
+ }
+
+
+ let myObj = new MyClass();

@@ -1,0 +1,7 @@
+Super keyword
+
+the super keyword is used to call the constructor of its parent class to acess the parents properties and methods
+
+super(args) // calls parents constructor
+
+super.parentMethod(args)
